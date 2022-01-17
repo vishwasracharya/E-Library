@@ -1,0 +1,13 @@
+﻿body {
+}
+
+.foot{
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-self: flex-end;
+}
+
+.section-2{
+    text-align: center;
+}

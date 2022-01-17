@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ELibrary.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Home</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <link href="custom/css/CustomStyle.css" rel="stylesheet" />
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+    <script src="fontawesome/js/all.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <!-- Header -->
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/books.png" width="25" height="25"/> E-Library</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+                        </ul>
+
+                        <ul class="navbar-nav">
+                            <li><asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" >View Books</asp:LinkButton></li>
+                            <li><asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" >User Login</asp:LinkButton></li>
+                            <li><asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" >Sign Up</asp:LinkButton></li>    
+                            <li><asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" >Logout</asp:LinkButton></li>
+                            <li><asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" >Hello User</asp:LinkButton></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Header -->
+
+        <!-- Content Division -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Content Division -->
+
+        <!-- Footer -->
+        <footer class="foot page-footer font-small blue>
+        <div class="footer-copyright text-center py-3">Vishwas Acharya © <a href="https://vishwasrachary.github.io"> vishwasrachary.github.io</a>
+        </div>
+        </footer>
+        <!-- Footer -->
+
+    </form>
+
+</body>
+</html>
