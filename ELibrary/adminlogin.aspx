@@ -13,7 +13,7 @@
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <img src="img/adminuser.png" class="center rounded" width="150px" alt="Default User Icon">
+                                    <img src="img/adminuser.png" class="center rounded" width="150px" alt="Default Admin Icon">
                                 </center>
                             </div>
                         </div>
@@ -34,7 +34,6 @@
 
                         <div class="row">
                             <div class="col">
-                                <form>
                                 <div class="form-group mb-3">
                                     <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Admin ID"></asp:TextBox>
                                 </div>
@@ -43,11 +42,9 @@
                                     <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                                 </div>
 
-                                <div class="form-group my-2 d-block">
+                                <div class="form-group my-2 d-grid gap-2">
                                     <asp:Button class="btn btn-success" ID="Button1" runat="server" Text="Login" />
                                 </div>
-
-                                </form>
                             </div>
                         </div>
 
