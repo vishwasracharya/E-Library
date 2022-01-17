@@ -8,7 +8,7 @@ A Project which is created while learning of ASP.NET.
 - HTML
 - CSS
 - JS
-- ASP>NET
+- ASP.NET
 
 # Software Used
 - Visual Studio 2017
