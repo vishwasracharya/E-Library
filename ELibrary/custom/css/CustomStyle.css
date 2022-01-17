@@ -1,5 +1,12 @@
 ﻿body {
 }
+a{
+    color: #0000;
+    text-decoration: none;
+}
+.center{
+    text-align: center;
+}
 
 .foot{
     display:flex;
