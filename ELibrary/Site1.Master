@@ -33,7 +33,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Home</a>
+                                <a class="nav-link active" href="homepage.aspx">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">About Us</a>
@@ -42,8 +42,8 @@
 
                         <ul class="navbar-nav">
                             <li><asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" >View Books</asp:LinkButton></li>
-                            <li><asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" >User Login</asp:LinkButton></li>
-                            <li><asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" >Sign Up</asp:LinkButton></li>    
+                            <li><asp:LinkButton href="userlogin.aspx" class="nav-link" ID="LinkButton1" runat="server" >User Login</asp:LinkButton></li>
+                            <li><asp:LinkButton href="usersignup.aspx" class="nav-link" ID="LinkButton2" runat="server" >Sign Up</asp:LinkButton></li>    
                             <li><asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" >Logout</asp:LinkButton></li>
                             <li><asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" >Hello User</asp:LinkButton></li>
                         </ul>
