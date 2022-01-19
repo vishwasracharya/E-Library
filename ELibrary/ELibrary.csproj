@@ -78,6 +78,7 @@
     <Content Include="books\b3.jpg" />
     <Content Include="books\b4.jpg" />
     <Content Include="books\b5.jpg" />
+    <Content Include="book_inventory\books1.png" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="custom\css\CustomStyle.css" />
@@ -1810,6 +1811,7 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="SqlConection.cs" />
     <Compile Include="userlogin.aspx.cs">
       <DependentUpon>userlogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
