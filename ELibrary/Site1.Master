@@ -44,7 +44,7 @@
                             <li><asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" >View Books</asp:LinkButton></li>
                             <li><asp:LinkButton href="userlogin.aspx" class="nav-link" ID="LinkButton1" runat="server" >User Login</asp:LinkButton></li>
                             <li><asp:LinkButton href="usersignup.aspx" class="nav-link" ID="LinkButton2" runat="server" >Sign Up</asp:LinkButton></li>    
-                            <li><asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" Visible="False" >Logout</asp:LinkButton></li>
+                            <li><asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click" >Logout</asp:LinkButton></li>
                             <li><asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" Visible="False" >Hello User</asp:LinkButton></li>
                         </ul>
                     </div>
