@@ -121,6 +121,8 @@ namespace ELibrary
             LinkButton9.Visible = false; //Book Inven Btn
             LinkButton10.Visible = false; //Book Issue Btn
             LinkButton11.Visible = false; //Member Manage Btn
+
+            Response.Redirect("homepage.aspx");
         }
     }
 }
