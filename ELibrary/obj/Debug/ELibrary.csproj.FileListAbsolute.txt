@@ -49,8 +49,8 @@ D:\Vishwas\Work\PRACTICE\ASP.NET\General Projects\Three\ELibrary\ELibrary\bin\ro
 D:\Vishwas\Work\PRACTICE\ASP.NET\General Projects\Three\ELibrary\ELibrary\bin\roslyn\VBCSCompiler.exe.config
 D:\Vishwas\Work\PRACTICE\ASP.NET\General Projects\Three\ELibrary\ELibrary\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Vishwas\Work\PRACTICE\ASP.NET\General Projects\Three\ELibrary\ELibrary\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Vishwas\Work\PRACTICE\ASP.NET\General Projects\Three\ELibrary\ELibrary\obj\Debug\ELibrary.csprojAssemblyReference.cache
 D:\Vishwas\Work\PRACTICE\ASP.NET\General Projects\Three\ELibrary\ELibrary\obj\Debug\ELibrary.csproj.CoreCompileInputs.cache
 D:\Vishwas\Work\PRACTICE\ASP.NET\General Projects\Three\ELibrary\ELibrary\obj\Debug\ELibrary.csproj.CopyComplete
 D:\Vishwas\Work\PRACTICE\ASP.NET\General Projects\Three\ELibrary\ELibrary\obj\Debug\ELibrary.dll
 D:\Vishwas\Work\PRACTICE\ASP.NET\General Projects\Three\ELibrary\ELibrary\obj\Debug\ELibrary.pdb
+D:\Vishwas\Work\PRACTICE\ASP.NET\General Projects\Three\ELibrary\ELibrary\obj\Debug\ELibrary.csproj.AssemblyReference.cache

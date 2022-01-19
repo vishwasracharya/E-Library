@@ -115,7 +115,7 @@
 
                                
                                 <div class="form-group my-2 d-grid gap-2">
-                                    <asp:Button class="btn btn-success" ID="Button1" runat="server" Text="Sign Up" />
+                                    <asp:Button class="btn btn-success" ID="Button1" runat="server" Text="Sign Up" OnClick="Button1_Click" />
                                 </div>
                         </div>
 
