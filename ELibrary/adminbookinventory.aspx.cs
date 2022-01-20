@@ -21,9 +21,9 @@ namespace ELibrary
         }
 
         // Go btn
-        protected void LinkButton1_Click(object sender, EventArgs e)
+        protected void Button4_Click(object sender, EventArgs e)
         {
-
+            getBookById();
         }
 
         // Add Btn
@@ -52,6 +52,58 @@ namespace ELibrary
         }
 
         // User Defined Function
+
+        void getBookById()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("SELECT * FROM book_id from book_master_tbl WHERE book_id='"+TextBox1.Text.Trim()+"';", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
+                {
+                    TextBox7.Text = dt.Rows[0]["book_name"].ToString();
+                    TextBox5.Text = dt.Rows[0]["publish_date"].ToString();
+                    TextBox2.Text = dt.Rows[0]["book_cost"].ToString().Trim();
+                    TextBox3.Text = dt.Rows[0]["no_of_pages"].ToString().Trim();
+                    TextBox4.Text = dt.Rows[0]["edition"].ToString();
+                    TextBox6.Text = dt.Rows[0]["actual_stock"].ToString().Trim();
+                    TextBox8.Text = ""+ (Convert.ToInt32(dt.Rows[0]["actual_stock"].ToString()) - Convert.ToInt32(dt.Rows[0]["current_stock"].ToString())); ;
+                    TextBox10.Text = dt.Rows[0]["book_description"].ToString();
+
+                    DropDownList2.SelectedValue = dt.Rows[0]["language"].ToString().Trim();
+                    DropDownList3.SelectedValue = dt.Rows[0]["publisher_name"].ToString().Trim();
+                    DropDownList4.SelectedValue = dt.Rows[0]["author_name"].ToString().Trim();
+
+                    ListBox1.ClearSelection();
+                    string[] genre = dt.Rows[0]["genre"].ToString().Trim().Split(',');
+                    for (int i=0; i < genre.Length; i++)
+                    {
+                        for(int j=0; j<ListBox1.Items.Count; j++)
+                        {
+                            if (ListBox1.Items[j].ToString() == genre[i])
+                            {
+                                ListBox1.Items[j].Selected = true;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    Response.Write("<script>alert('Invalid Author ID');</script>");
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>Console.WriteLine('" + ex.Message + "');</script>");
+            }
+        }
 
         void fillAuthorPublisherValues()
         {
@@ -168,6 +220,7 @@ namespace ELibrary
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
-              
+
+        
     }
 }
