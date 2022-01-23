@@ -124,5 +124,10 @@ namespace ELibrary
 
             Response.Redirect("homepage.aspx");
         }
+
+        protected void LinkButton4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("viewbooks.aspx");
+        }
     }
 }
