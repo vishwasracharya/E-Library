@@ -22,7 +22,7 @@
                                 <label>Member ID</label>
                                 <div class="form-group mb-3">
                                     <div class="input-group">
-                                        <asp:TextBox class="form-control" ID="TextBox1" runat="server" placeholder="Member ID" TextMode="Number"></asp:TextBox>
+                                        <asp:TextBox class="form-control" ID="TextBox1" runat="server" placeholder="Member ID" TextMode="SingleLine"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -31,8 +31,8 @@
                                 <label>Book ID</label>
                                 <div class="form-group mb-3">
                                     <div class="input-group">
-                                    <asp:TextBox class="form-control" ID="TextBox2" runat="server" placeholder="Book ID" TextMode="Number"></asp:TextBox>
-                                    <asp:Button class="btn btn-secondary" ID="Button1" runat="server" Text="Go" />
+                                    <asp:TextBox class="form-control" ID="TextBox2" runat="server" placeholder="Book ID" TextMode="SingleLine"></asp:TextBox>
+                                    <asp:Button class="btn btn-secondary" ID="Button1" runat="server" Text="Go" OnClick="Button1_Click" />
                                     </div>
                                 </div>
                             </div>
@@ -80,10 +80,10 @@
 
                         <div class="row">
                             <div class="col-md-6 d-grid">
-                                <asp:Button class="btn btn-primary" ID="Button2" runat="server" Text="Issue" />
+                                <asp:Button class="btn btn-primary" ID="Button2" runat="server" Text="Issue" OnClick="Button2_Click" />
                             </div>
                             <div class="col-md-6 d-grid">
-                                <asp:Button class="btn btn-success" ID="Button3" runat="server" Text="Return" />
+                                <asp:Button class="btn btn-success" ID="Button3" runat="server" Text="Return" OnClick="Button3_Click" />
                             </div>
                         </div>
 
@@ -107,8 +107,18 @@
                         </div>
 
                         <div class="row">
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:elibraryDBConnectionString %>' SelectCommand="SELECT * FROM [book_issue_tbl]"></asp:SqlDataSource>
                             <div class="col">
-                                <asp:GridView class="table table-hover" ID="GridView1" runat="server"></asp:GridView>
+                                <asp:GridView class="table table-hover" ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+                                    <Columns>
+                                        <asp:BoundField DataField="member_id" HeaderText="Member Id" SortExpression="member_id"></asp:BoundField>
+                                        <asp:BoundField DataField="member_name" HeaderText="Name" SortExpression="member_name"></asp:BoundField>
+                                        <asp:BoundField DataField="book_id" HeaderText="Book Id" SortExpression="book_id"></asp:BoundField>
+                                        <asp:BoundField DataField="book_name" HeaderText="Book Name" SortExpression="book_name"></asp:BoundField>
+                                        <asp:BoundField DataField="issue_date" HeaderText="Issue Date" SortExpression="issue_date"></asp:BoundField>
+                                        <asp:BoundField DataField="due_date" HeaderText="Due Date" SortExpression="due_date"></asp:BoundField>
+                                    </Columns>
+                                </asp:GridView>
                             </div>
                         </div>
 
