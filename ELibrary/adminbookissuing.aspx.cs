@@ -29,7 +29,14 @@ namespace ELibrary
         {
             if(checkIfBookExists() && checkIfMemberExists())
             {
-                issueBook();
+                if (checkIfEntryExists())
+                {
+                    Response.Write("<script>alert('Cannot issue one more');</script>");
+                }
+                else
+                {
+                    issueBook();
+                }
             }
             else
             {
@@ -40,7 +47,7 @@ namespace ELibrary
         // Return Btn
         protected void Button3_Click(object sender, EventArgs e)
         {
-
+            retunBook();
         }
 
         void getNames()
@@ -94,7 +101,7 @@ namespace ELibrary
 
             }
         }
-
+        
         bool checkIfBookExists()
         {
             try
@@ -137,6 +144,42 @@ namespace ELibrary
                 }
 
                 SqlCommand cmd = new SqlCommand("SELECT full_name FROM member_master_tbl WHERE member_id='" + TextBox1.Text.Trim() + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count >= 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+                return false;
+            }
+        }
+
+        void retunBook()
+        {
+
+        }
+
+        bool checkIfEntryExists()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("SELECT * FROM book_issue_tbl WHERE member_id='" + TextBox1.Text.Trim() + "' AND book_id='" + TextBox2.Text.Trim() + "' AND current_stock > 0", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
