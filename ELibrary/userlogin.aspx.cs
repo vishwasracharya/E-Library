@@ -46,7 +46,7 @@ namespace ELibrary
                 }
                 else
                 {
-                    Response.Write("<script>alert('Invalid Login INFO');</script>");
+                     // Response.Write("<script>alert('Invalid Login INFO');</script>");
                 }
             }
             catch (Exception ex)
