@@ -21,7 +21,7 @@ A Project which is created while learning of ASP.NET, It is not my own design I'
 
 # Hi, I'm Vishwas Acharya! 👋
 
-I'm a about to complete my Bachelor's of I.T Engineering, and also as a side hustule make You-Tube videos, Podcast, Blogs and more...
+I completed my Bachelor's of I.T Engineering, and also as a side hustule make You-Tube videos, Podcast, Blogs and more...
 
 ### Connect with me
   <a href="https://twitter.com/vishwasracharya">
