@@ -2,7 +2,7 @@
 <a href="https://github.com/vishwasracharya/E-Library/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/vishwasracharya/E-Library?color=blue"></a>
 <a href="https://github.com/vishwasracharya/E-Library/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/vishwasracharya/E-Library?color=orange"></a>
 
-An ASP.NET Project created while learning, It is not my own design I've copied the designed from the tutorial, You can call it "I was coding along with the tutorial". Also link of that playlist is:
+An ASP.NET Project created while learning, It is not my own design I've grabed the designed from the tutorial, You can call it "I was coding along with the tutorial". Also link of that playlist is:
 > https://www.youtube.com/playlist?list=PLIY8eNdw5tW_ZQawyxK0Dd1cZXwcNFWn8
 
 # Tech/Language Used
